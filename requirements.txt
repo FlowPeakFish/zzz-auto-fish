@@ -1,15 +1,7 @@
-﻿MouseInfo==0.1.3
-pyautogui
-PyDirectInput==1.0.4
-pygetwindow
-PyMsgBox==1.0.9
-PyRect==0.2.0
-PyScreeze==1.0.1
-numpy==2.2.3
+# Windows x64 / Python 3.12. tkinter is included in the full Python runtime.
 opencv-python==4.11.0.86
-pillow==11.1.0
-pip==23.2.1
-pynput==1.7.7
-pyperclip==1.9.0
-pytweening==1.2.0
-six==1.17.0
+numpy==2.2.3
+PyAutoGUI==0.9.54
+PyDirectInput==1.0.4
+PyGetWindow==0.0.9
+Pillow==11.1.0

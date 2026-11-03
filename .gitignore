@@ -1,4 +1,29 @@
-*.spec
+# Local interpreters, dependencies, downloads and caches
+/envs/
+/.venv/
+/venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+# IDE and local OS files
 .idea/
-build/
-dist/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+# Runtime data and private diagnostic screenshots
+/debug/
+*.log
+*.log.*
+# Packaging output
+/build/
+/dist/
+*.spec
+# Old development-only materials
+/samples/
+/test_fish.py
+/fish.before_client_area.py
+/templates_preview.png
