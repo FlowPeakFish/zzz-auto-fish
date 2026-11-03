@@ -61,6 +61,15 @@ class StoppableInput:
         self.stop.check()
         return self.backend.press(*args, **kwargs)
 
-    def click(self, *args, **kwargs):
+    def click(self, x=None, y=None, button='left', _pause=False):
+        """分开发送按下和松开，让游戏有机会读取到完整的点击状态。"""
         self.stop.check()
-        return self.backend.click(*args, **kwargs)
+        self.backend.moveTo(x=x, y=y, _pause=False)
+        self.stop.wait(0.08)
+        self.stop.check()
+        try:
+            self.backend.mouseDown(button=button, _pause=False)
+            self.stop.wait(0.12)
+        finally:
+            # Esc 或输入异常打断等待时，仍必须释放鼠标。
+            self.backend.mouseUp(button=button, _pause=False)
